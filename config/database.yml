@@ -48,8 +48,23 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+# production:
+#   <<: *default
+#   adapter: postgresql
+#   encoding: unicode
+#   pool: 5
+#   host: aws-0-ap-northeast-1.pooler.supabase.com
+#   database: postgres
+#   username: postgres.zfqztnalyfkfuismxbni
+#   password: <%= ENV['tamabukuro1026'] %>
+  
 production:
-  <<: *default
-  database: kadai_tasklist_production
-  username: kadai_tasklist
-  password: <%= ENV['KADAI_TASKLIST_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  port: 5432
+  host: aws-0-ap-northeast-1.pooler.supabase.com
+  database: postgres
+  username: postgres.zfqztnalyfkfuismxbni
+  # password: <%= ENV['SUPABASE_DATABASE_PASSWORD'] %>
+  password: BMLeRKKg06G0206q
